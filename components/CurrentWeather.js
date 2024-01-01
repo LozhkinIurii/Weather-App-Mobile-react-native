@@ -20,8 +20,7 @@ const CurrentWeather = () => {
     useEffect(() => {
         const fetchWeatherForecast = async () => {
             try {
-                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${APPID}`
-                );
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${APPID}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
