@@ -20,7 +20,7 @@ const CurrentWeather = () => {
     useEffect(() => {
         const fetchWeatherForecast = async () => {
             try {
-                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=ef7f6e82e66fc22ccbecc983a791642d`
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${APPID}`
                 );
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
@@ -60,7 +60,7 @@ const CurrentWeather = () => {
 
     const currentLocation = async () => {
         try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=ef7f6e82e66fc22ccbecc983a791642d`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${APPID}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch data');
             }

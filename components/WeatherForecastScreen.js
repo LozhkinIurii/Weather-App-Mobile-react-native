@@ -39,7 +39,7 @@ const WeatherForecastScreen = () => {
         const fetchWeatherForecast = async () => {
             try {
                 const response = await fetch(
-                    `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=${city}&appid=ef7f6e82e66fc22ccbecc983a791642d`
+                    `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=${city}&appid=${APPID}`
                 );
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
